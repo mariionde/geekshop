@@ -2,13 +2,16 @@ from django.shortcuts import render
 
 
 def main(request):
-    return render(request, 'mainapp/index.html')
+    context = {'name': 'Мария', 'date':'25 апреля', }
+    return render(request, 'mainapp/index.html', context)
 
 
 def products(request):
-    return render(request, 'mainapp/products.html')
+    context = {'products':'100'}
+    return render(request, 'mainapp/products.html', context)
 
 
 def contacts (request):
-    return render(request, 'mainapp/contacts.html')
+    context = {'phone':"8291912920136362"}
+    return render(request, 'mainapp/contacts.html', context)
 # Create your views here.
