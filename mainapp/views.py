@@ -16,11 +16,14 @@ def contacts (request):
     return render(request, 'mainapp/contacts.html', context)
 # Create your views here.
 
+
+
+
 from .models import ProductCategory, Product
 
 
 def main(request):
-    title = 'Главная'
+    title = 'главная'
 
     products = Product.objects.all()[:4]
 
