@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Продукты</h1>
-    <div> В наличии {{ products}} видов продуктов</div>
+    <div> В наличии {{ Product.objects.all()}} видов продуктов</div>
 {% endblock %}
 
 {% for product in products %}

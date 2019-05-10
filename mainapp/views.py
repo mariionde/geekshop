@@ -7,8 +7,9 @@ def main(request):
 
 
 def products(request):
-    context = {'products':'100'}
-    return render(request, 'mainapp/products.html', context)
+    products = Product.objects.all()
+    content = {'products': products}
+    return render(request, 'mainapp/products.html', content)
 
 
 def contacts (request):
@@ -19,13 +20,3 @@ def contacts (request):
 
 
 
-from .models import ProductCategory, Product
-
-
-def main(request):
-    title = 'главная'
-
-    products = Product.objects.all()[:4]
-
-    content = {'title': title, 'products': products}
-    return render(request, 'mainapp/index.html', content)
