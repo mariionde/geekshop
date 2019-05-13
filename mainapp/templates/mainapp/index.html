@@ -3,7 +3,7 @@
 {% block content %}
 
     <h1>Главная</h1>
-    <div>Привет, {{ name }} <br> Ты зарегестрировалась на этом сайте {{ date }} {% now "Y" %}</div>
+    <div>Привет, {{ request.user }} <br> Ты зарегестрировалась на этом сайте {{ date }} {% now "Y" %}</div>
 
 {% endblock %}
 

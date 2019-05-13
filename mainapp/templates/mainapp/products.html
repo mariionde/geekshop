@@ -8,7 +8,7 @@
 {% for product in products %}
   <div>
     <a href="#">
-      <img src="/static/{{ product.image }}" alt="{{ product.short_desc }}">
+      <img src="/static/{{ Product.image }}" alt="{{ Product.short_desc }}">
       <div class="text">
         <h3>{{ product.category.name }}</h3>
         <h4>{{ product.name }}</h4>
